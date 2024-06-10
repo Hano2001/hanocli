@@ -4,20 +4,19 @@ if (args.length === 1) {
   args.push(0);
 }
 const playerNames = [...args];
-const players = [];
-
+const players = {};
+let highScore = 0;
+function Player(name, score, place) {
+  this.index = name;
+  this.score = score;
+  this.place = place;
+}
 playerNames.map((player) => {
-  let score = 0;
-
   for (let i = 1; i <= 5; i++) {
     const die = Math.floor(Math.random() * 6 + 1);
-
     score += die;
   }
-  players.push({
-    Player: player,
-    Score: score,
-  });
+  players[player] = new Player(player, score, "lost");
 });
 
 console.table(players);
