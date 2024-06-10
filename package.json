@@ -5,11 +5,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin":{
-    "tran":"./bin/index.js"
+  "bin": {
+    "tran": "./bin/index.js"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
-
+  "description": "",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
 }
