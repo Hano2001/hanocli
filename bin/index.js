@@ -3,19 +3,20 @@ const args = [...process.argv.slice(2, process.argv.length)];
 if (args.length === 1) {
   args.push(0);
 }
-const players = [];
+const players = [...args];
 
-args.map((arg) => {
-  const dice = [];
+players.map((player) => {
+  let score = 0;
 
-  for (let i = 0; i <= Number(arg); i++) {
+  for (let i = 1; i <= 5; i++) {
     const die = Math.floor(Math.random() * 6 +1);
-
-    dice.push(die);
+    console.log(die);
+    
+    score += die
   }
   players.push({
-    Score: dice.reduce((acc, curr) => acc + curr, 0),
-    Dice: dice,
+    Player: player,
+    Score: score,
   });
 });
 
