@@ -7,13 +7,9 @@ const players = [];
 
 args.map((arg) => {
   const dice = [];
-    console.log(arg);
-    
+
   for (let i = 0; i <= Number(arg); i++) {
-    console.log(i);
-    
-    const die = Math.floor(Math.random() * 7);
-    console.log(die);
+    const die = Math.floor(Math.random() * 6 +1);
 
     dice.push(die);
   }

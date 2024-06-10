@@ -8,9 +8,13 @@
   "bin": {
     "tran": "./bin/index.js"
   },
-  "author": "",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Hano2001/hanocli"
+  },
+  "author": "Hano2001",
   "license": "ISC",
-  "description": "",
+  "description": "For now a silly little dice thrower",
   "dependencies": {
     "yargs": "^17.7.2"
   }
