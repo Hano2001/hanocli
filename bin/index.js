@@ -21,9 +21,17 @@ playerNames.map((player) => {
   players[player] = new Player(player, score);
 });
 const highScore = Math.max(...scores);
+const scoreFilter = scores.filter(x => x === highScore);
 
 Object.values(players).map((player) => {
-  player.place = player.score === highScore ? "Winner!" : "Loser :(";
+  if(player.score === highScore) {
+    console.log(scoreFilter.length);
+    
+    player.place = scoreFilter.length > 1 ? "Tied Winner" : "Winner"
+  }
+  else {
+    player.place = "Looser :(";
+  }
 });
 
 console.table(players);
